@@ -1,0 +1,42 @@
+project/
+│
+├── backend/                # Flask backend
+│   ├── app.py             # Main Flask application
+│   ├── models.py          # Database models
+│   ├── routes/            # API routes
+│   │   ├── auth_routes.py
+│   │   ├── template_routes.py
+│   │   └── file_routes.py
+│   ├── utils/             # PDF Extraction utilities
+│   │   ├── pdf_parser.py
+│   │   └── jwt_handler.py
+│   ├── migrations/        # Database migration folder
+│   ├── requirements.txt   # Python dependencies
+│   └── config.py          # Configuration file
+│
+├── frontend/              # React.js frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/    # React components
+│   │   │   ├── Layout.js
+│   │   │   ├── Header.js
+│   │   │   ├── Sidebar.js
+│   │   │   ├── Login.js
+│   │   │   ├── Signup.js
+│   │   │   ├── TemplateKeys.js
+│   │   │   └── FileUpload.js
+│   │   ├── pages/
+│   │   │   ├── AdminDashboard.js
+│   │   │   └── SuperAdminDashboard.js
+│   │   ├── services/      # API Services
+│   │   ├── hooks/         # Custom Hooks
+│   │   ├── utils/         # Utility files
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── styles.css
+│   ├── package.json
+│   ├── .eslintrc.json
+│   ├── .prettierrc
+│   └── .husky/
+│
+└── README.md

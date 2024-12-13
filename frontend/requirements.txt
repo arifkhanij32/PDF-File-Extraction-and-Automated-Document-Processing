@@ -1,0 +1,24 @@
+npx create-react-app frontend
+cd frontend
+npm install @mui/material @emotion/react @emotion/styled react-hook-form zod axios
+npm install eslint prettier husky --save-dev
+
+
+npm install react@18 react-dom@18
+npm install @testing-library/react @testing-library/jest-dom @testing-library/user-event web-vitals
+
+@emotion/react
+@emotion/styled
+@mui/material
+@testing-library/jest-dom
+@testing-library/react
+@testing-library/user-event
+axios
+eslint
+husky
+prettier
+react@18
+react-dom@18
+react-hook-form
+web-vitals
+zod
