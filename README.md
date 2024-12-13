@@ -16,10 +16,30 @@ This is a full-stack PDF extraction application built using Flask for the backen
 ## Installation
 
 ### Backend
+
 1. `cd backend`
+
+    `pip install flask`
+
 2. Install dependencies: `pip install -r requirements.txt`
 3. Configure environment variables in `.env`.
-4. Run the app: `python app.py`.
+
+    `python -m venv venv`
+    Activate Virtual Environment:
+
+    Windows: `venv\Scripts\activate`.
+
+4. Common: `Flask-Migrate`:
+
+    `flask db init`	Initialize the migration directory.
+    `flask db migrate -m "Message"`	Create a new migration script.
+    `flask db upgrade`	Apply migrations to the database.
+    `flask db downgrade`	Revert the last migration.
+    `flask db history`	Show migration history.
+    `flask db current`	Display the current migration version.
+    `flask db stamp head`	Mark the database as up-to-date.
+
+5. Run the app: `python app.py`.
 
 ### Frontend
 1. `cd frontend`
@@ -32,22 +52,23 @@ This is a full-stack PDF extraction application built using Flask for the backen
 - `GET /templates/`
 - `POST /files/upload`
 
+# Getting Started with Create React App
+
 How to Use It: If someone else wants to replicate the environment using this requirements.txt file, they need to install each dependency using:
 
-bash
-Copy code
-npm install $(cat requirements.txt)
-Or, they can install them one by one manually using npm install.
+`cd frontend`
 
-Recommended Method: A package.json file is the standard in React projects for managing dependencies. You can recreate it by running:
+`npm install $(cat requirements.txt)`
 
-bash
-Copy code
-npm init
-npm install <dependencies>
+`npm install`
 
+`npm install @mui/material @emotion/react @emotion/styled react-hook-form zod axios`
 
-# Getting Started with Create React App
+`npm install eslint prettier husky --save-dev`
+
+`npm install react@18 react-dom@18`
+
+`npm install @testing-library/react @testing-library/jest-dom @testing-library/user-event web-vitals`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
