@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getTemplateKeys, createTemplateKey, updateTemplateKey, deleteTemplateKey } from "../services/api";
+import {
+  getTemplateKeys,
+  createTemplateKey,
+  updateTemplateKey,
+  deleteTemplateKey,
+} from "../services/api";
+import "./TemplateKeys.css"; // Import the CSS file
 
 const TemplateKeys = () => {
   const [keys, setKeys] = useState([]); // State for fetched template keys
@@ -10,7 +16,7 @@ const TemplateKeys = () => {
   const fetchKeys = async () => {
     try {
       const response = await getTemplateKeys();
-      setKeys(response.templates); // Update the keys state
+      setKeys(response.templates);
     } catch (error) {
       console.error("Failed to fetch keys:", error);
     }
@@ -52,36 +58,66 @@ const TemplateKeys = () => {
     }
   };
 
-  // Load keys on component mount
   useEffect(() => {
     fetchKeys();
   }, []);
 
   return (
-    <div>
-      <h2>Template Keys</h2>
-      
+    <div className="template-keys-container">
+      <h2 className="template-keys-title">Template Keys</h2>
+
       {/* Input Section */}
-      <input
-        type="text"
-        placeholder="Template Key Name"
-        value={newKey}
-        onChange={(e) => setNewKey(e.target.value)}
-      />
-      {editingKey ? (
-        <button onClick={handleUpdateKey}>Update Key</button>
-      ) : (
-        <button onClick={handleCreateKey}>Add Key</button>
-      )}
+      <div className="template-keys-form">
+        <input
+          type="text"
+          placeholder="Template Key Name"
+          value={newKey}
+          onChange={(e) => setNewKey(e.target.value)}
+          className="template-keys-input"
+        />
+        {editingKey ? (
+          <button
+            className="template-keys-button-update"
+            onClick={handleUpdateKey}
+          >
+            Update Key
+          </button>
+        ) : (
+          <button
+            className="template-keys-button-add"
+            onClick={handleCreateKey}
+          >
+            Add Key
+          </button>
+        )}
+      </div>
 
       {/* List Section */}
-      <ul>
+      <ul className="template-keys-list">
         {keys.map((key) => (
-          <li key={key.id}>
-            <strong>Name:</strong> {key.name} <br />
-            <strong>Description:</strong> {key.description || "No description"} <br />
-            <button onClick={() => { setEditingKey(key.id); setNewKey(key.name); }}>Edit</button>
-            <button onClick={() => handleDeleteKey(key.id)}>Delete</button>
+          <li key={key.id} className="template-keys-item">
+            <div>
+              <strong>Name:</strong> {key.name} <br />
+              <strong>Description:</strong>{" "}
+              {key.description || "No description"}
+            </div>
+            <div className="template-keys-button-group">
+              <button
+                className="template-keys-button-edit"
+                onClick={() => {
+                  setEditingKey(key.id);
+                  setNewKey(key.name);
+                }}
+              >
+                Edit
+              </button>
+              <button
+                className="template-keys-button-delete"
+                onClick={() => handleDeleteKey(key.id)}
+              >
+                Delete
+              </button>
+            </div>
           </li>
         ))}
       </ul>
@@ -90,3 +126,4 @@ const TemplateKeys = () => {
 };
 
 export default TemplateKeys;
+
