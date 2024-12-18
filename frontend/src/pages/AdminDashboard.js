@@ -41,7 +41,7 @@ const AdminDashboard = () => {
       <div style={{ padding: "10px" }}>
         <h2>Admin Dashboard</h2>
         <input type="file" onChange={(e) => setFile(e.target.files[0])} />
-        <button onClick={handleUpload}>Upload PDF</button>
+        <button onClick={handleUpload}>Upload</button>
         {extractedText && (
           <div>
             <h3>Extracted Text:</h3>
