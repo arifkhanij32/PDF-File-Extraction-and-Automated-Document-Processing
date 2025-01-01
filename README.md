@@ -22,24 +22,19 @@ This is a full-stack PDF extraction application built using Flask for the backen
     `pip install flask`
 
 2. Install dependencies: `pip install -r requirements.txt`
-3. Configure environment variables in `.env`.
 
-    `python -m venv venv`
-    Activate Virtual Environment:
-
-    Windows: `venv\Scripts\activate`.
-
-4. Common: `Flask-Migrate`:
+3. Common: `Flask-Migrate`:
 
     `flask db init`	Initialize the migration directory.
     `flask db migrate -m "Message"`	Create a new migration script.
     `flask db upgrade`	Apply migrations to the database.
+
     `flask db downgrade`	Revert the last migration.
     `flask db history`	Show migration history.
     `flask db current`	Display the current migration version.
     `flask db stamp head`	Mark the database as up-to-date.
 
-5. Run the app: `python app.py`.
+4. Run the app: `python app.py`.
 
 ## API Endpoints
 - `POST /auth/signup`
