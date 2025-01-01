@@ -41,34 +41,32 @@ This is a full-stack PDF extraction application built using Flask for the backen
 
 5. Run the app: `python app.py`.
 
-### Frontend
-1. `cd frontend`
-2. Install dependencies: `npm install`
-3. Run the app: `npm start`.
-
 ## API Endpoints
 - `POST /auth/signup`
 - `POST /auth/login`
 - `GET /templates/`
 - `POST /files/upload`
 
+###################################################################################
+
 # Getting Started with Create React App
 
 How to Use It: If someone else wants to replicate the environment using this requirements.txt file, they need to install each dependency using:
 
-`cd frontend`
+### Frontend
+1. `cd frontend`
 
 `npm install $(cat requirements.txt)`
 
 `npm install`
 
-`npm install @mui/material @emotion/react @emotion/styled react-hook-form zod axios`
+<!-- `npm install @mui/material @emotion/react @emotion/styled react-hook-form zod axios` -->
 
-`npm install eslint prettier husky --save-dev`
+<!-- `npm install eslint prettier husky --save-dev` -->
 
-`npm install react@18 react-dom@18`
+<!-- `npm install react@18 react-dom@18` -->
 
-`npm install @testing-library/react @testing-library/jest-dom @testing-library/user-event web-vitals`
+<!-- `npm install @testing-library/react @testing-library/jest-dom @testing-library/user-event web-vitals` -->
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -76,10 +74,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+2. `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+#############################################################################
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
