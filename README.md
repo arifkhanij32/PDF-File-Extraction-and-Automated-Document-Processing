@@ -1,114 +1,135 @@
-PDF Extraction App
+# PDF Extraction App
+
 This is a full-stack PDF extraction application built using Flask for the backend and React for the frontend.
 
-Features
-Role-based access control for Admin and Super Admin.
-PDF upload and text extraction.
-Dynamic viewing of extracted text.
-CRUD operations for template keys.
-Technologies Used
-Backend: Flask, PostgreSQL, SQLAlchemy, PyPDF2
-Frontend: React.js, Material-UI, Axios
-Auth: JWT
-Installation
-Backend
-cd backend
+## Features
+- Role-based access control for Admin and Super Admin.
+- PDF upload and text extraction.
+- Dynamic viewing of extracted text.
+- CRUD operations for template keys.
 
-pip install flask
+## Technologies Used
+- **Backend**: Flask, PostgreSQL, SQLAlchemy, PyPDF2
+- **Frontend**: React.js, Material-UI, Axios
+- **Auth**: JWT
 
-Install dependencies: pip install -r requirements.txt
+## Installation
 
-Configure environment variables in .env.
+### Backend
 
-python -m venv venv Activate Virtual Environment:
+1. `cd backend`
 
-Windows: venv\Scripts\activate.
+    `pip install flask`
 
-Common: Flask-Migrate:
+2. Install dependencies: `pip install -r requirements.txt`
 
-flask db init Initialize the migration directory. flask db migrate -m "Message" Create a new migration script. flask db upgrade Apply migrations to the database. flask db downgrade Revert the last migration. flask db history Show migration history. flask db current Display the current migration version. flask db stamp head Mark the database as up-to-date.
+3. Common: `Flask-Migrate`:
 
-Run the app: python app.py.
+    `flask db init`	Initialize the migration directory.
+    `flask db migrate -m "Message"`	Create a new migration script.
+    `flask db upgrade`	Apply migrations to the database.
 
-Frontend
-cd frontend
-Install dependencies: npm install
-Run the app: npm start.
-API Endpoints
-POST /auth/signup
-POST /auth/login
-GET /templates/
-POST /files/upload
-Getting Started with Create React App
+    `flask db downgrade`	Revert the last migration.
+    `flask db history`	Show migration history.
+    `flask db current`	Display the current migration version.
+    `flask db stamp head`	Mark the database as up-to-date.
+
+4. Run the app: `python app.py`.
+
+## API Endpoints
+- `POST /auth/signup`
+- `POST /auth/login`
+- `GET /templates/`
+- `POST /files/upload`
+
+###################################################################################
+
+# Getting Started with Create React App
+
 How to Use It: If someone else wants to replicate the environment using this requirements.txt file, they need to install each dependency using:
 
-cd frontend
+### Frontend
+1. `cd frontend`
 
-npm install $(cat requirements.txt)
+`npm install $(cat requirements.txt)`
 
-npm install
+`npm install`
 
-npm install @mui/material @emotion/react @emotion/styled react-hook-form zod axios
+<!-- `npm install @mui/material @emotion/react @emotion/styled react-hook-form zod axios` -->
 
-npm install eslint prettier husky --save-dev
+<!-- `npm install eslint prettier husky --save-dev` -->
 
-npm install react@18 react-dom@18
+<!-- `npm install react@18 react-dom@18` -->
 
-npm install @testing-library/react @testing-library/jest-dom @testing-library/user-event web-vitals
+<!-- `npm install @testing-library/react @testing-library/jest-dom @testing-library/user-event web-vitals` -->
 
-This project was bootstrapped with Create React App.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Available Scripts
+## Available Scripts
+
 In the project directory, you can run:
 
-npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
+2. `npm start`
 
-The page will reload when you make changes.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+#############################################################################
+
+The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-npm test
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+### `npm test`
 
-npm run build
-Builds the app for production to the build folder.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.
+The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about deployment for more information.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-npm run eject
-Note: this is a one-way operation. Once you eject, you can't go back!
+### `npm run eject`
 
-If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Learn More
-You can learn more in the Create React App documentation.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-To learn React, check out the React documentation.
+## Learn More
 
-Code Splitting
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Analyzing the Bundle Size
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Making a Progressive Web App
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Code Splitting
 
-Advanced Configuration
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Deployment
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Analyzing the Bundle Size
 
-npm run build fails to minify
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
